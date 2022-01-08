@@ -11,20 +11,30 @@ const answerButtonsEl = document.getElementById('answer-button')
 var shuffledQuestions, currentQuestionIndex
 
 //timer
-var timeCount = 60;
+var timeCount = 2;
 
 //game will start when i click the start button
 startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startTimer)
 
 //When I click start game the game starts with a random question
 function startGame() {
     console.log('Started game')
     startButton.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerEl.classList.remove('hide')
     setNextQuestion()
 }
+
+function startTimer() {
+    console.log('timers workin')
+    setInterval(function (){
+    timer.innerHTML = `${timeCount -- } seconds`;
+    if (timeCount < 0) {
+        clearInterval(timer)
+    }
+    }, 1000)}
 
 //When answer is clicked game will show questions
 function setNextQuestion() {
@@ -37,7 +47,11 @@ function showQuestion(question) {
         const button = document.createElement('button')
         button.innerText = answer.text
             button.classList.add('btn', 'btn-grid')
-        if (answer.correct) {
+            var buttonEl = document.querySelectorAll('.ansrBtn')
+            for (var i = 0; i < buttonEl.length; i++) [
+                buttonEl[i].classList.add('hide')
+            ]
+            if (answer.correct) {
             button.dataset.correct = answer.correct
         }
         button.addEventListener('click', selectAnswer)
@@ -111,4 +125,3 @@ var questions = [
 function selectAnswer() {
 
 }
-
