@@ -18,17 +18,17 @@
         <nav>
             <a href="./Assets/HighScores.html" onclick="window.open">View Highscores</a>
             <h1>Coding Quiz</h1>
-            <p>Time remaining: <span id="timer"></span></p>
+            <p id="remaining">Time remaining: <span id="timer"></span></p>
         </nav>
     </header>
     <section class="container">
         <div id="question-container" class="hide">
             <div id="question">Question is written here!</div>
                 <div id="answer-buttons" class="btn-grid">
-                    <button class="btn ansrBtn">Answer 1</button>
-                    <button class="btn ansrBtn">Answer 2</button>
-                    <button class="btn ansrBtn">Answer 3</button>
-                    <button class="btn ansrBtn">Answer 4</button>
+                    <button class="btn ansrBtn" id="answer-button">Answer 1</button>
+                    <button class="btn ansrBtn" id="answer-buttons">Answer 2</button>
+                    <button class="btn ansrBtn" id="answer-buttons">Answer 3</button>
+                    <button class="btn ansrBtn" id="answer-buttons">Answer 4</button>
                 </div>
             </div>
         <div id="controls">

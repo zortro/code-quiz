@@ -1,0 +1,24 @@
+*, *::before *::after {
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 30%)
+}
+
+header {
+    width: 100%;
+}
+
+.highscores-container {
+    background-color: white;
+    border-radius: 5px;
+}

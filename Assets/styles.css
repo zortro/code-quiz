@@ -36,24 +36,20 @@ p {
     margin: 0;
 }
 
-.scores {
-    padding-right: 58px;
-}
-
 a {
     text-decoration: none;
     color: black;
 }
 
 a:hover {
-    color: blue;
+    color: hsl(214, 53%, 51%);
 }
 
 nav {
     padding: 1px;
     display: flex;
-    justify-content: space-between;
-    align-items: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 body.correct {
@@ -86,7 +82,7 @@ body.wrong {
 
 .btn {
     --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
+    border: 1px solid hsl(var(--hue), 100%, 50%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 2px;
     padding: 5px 10px;
@@ -95,7 +91,8 @@ body.wrong {
 }
 
 .btn:hover {
-    border-color: black;
+    background-color: hsl(var(--hue), 100%, 30%);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
 }
 
 .btn.wrong {
@@ -121,4 +118,47 @@ body.wrong {
 
 .hide {
     display: none;
+}
+
+/* HighScores.html*/
+li {
+    color: white;
+}
+
+.scores {
+    padding-right: 58px;
+}
+
+.scores-grid {
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#name {
+    padding-left: 5px;
+    list-style-type: none;
+    background-color: hsl(var(--hue), 100%, 50%);
+    border: 2px solid hsl(var(--hue), 100%, 50%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 80%;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-color: hsl(var(--hue), 100%, 30%);
+    border: 2px solid hsl(var(--hue), 100%, 30%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    width: 20%;
+}
+
+
+@media screen (max-width: 800px) {
+    
 }
