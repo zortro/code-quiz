@@ -68,7 +68,7 @@ let questions = [
             'no this is okay.',
             'this is the correct answer: its finished but looks and feels unfinished'
         ],
-        correct: 'Correct Answer'
+        correct: 'this is the correct answer: its finished but looks and feels unfinished'
     },
 ]
 
