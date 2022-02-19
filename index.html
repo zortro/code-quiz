@@ -23,13 +23,16 @@
     </header>
     <section class="container">
         <div id="question-container" class="hide">
-            <div id="question">Question is written here!</div>
+            <div id="question"></div>
+                <input id="name" class="hide" placeholder="Name">
                 <div id="answer-buttons" class="btn-grid">
-                    <button class="btn ansrBtn" id="answer-button">Answer 1</button>
-                    <button class="btn ansrBtn" id="answer-buttons">Answer 2</button>
-                    <button class="btn ansrBtn" id="answer-buttons">Answer 3</button>
-                    <button class="btn ansrBtn" id="answer-buttons">Answer 4</button>
+                    <div class="answer-btn btn" id="one"></div>
+                    <div class="answer-btn btn" id="two"></div>
+                    <div class="answer-btn btn" id="three"></div>
+                    <div class="answer-btn btn" id="four"></div>
                 </div>
+            <br>
+                <button class="start-btn btn hide" id="save">Save Score</button>
             </div>
         <div id="controls">
             <button id="start-btn" class="start-btn btn">Start Quiz</button>

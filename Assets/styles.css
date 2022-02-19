@@ -95,11 +95,11 @@ body.wrong {
     border: 1px solid hsl(var(--hue), 100%, 30%);
 }
 
-.btn.wrong {
+.wrong {
     --hue: var(--hue-wrong);
 }
 
-.btn.correct {
+.correct {
     --hue: var(--hue-correct);
     color: black;
 }
@@ -156,9 +156,4 @@ li {
     border-bottom-right-radius: 5px;
     border-left: none;
     width: 20%;
-}
-
-
-@media screen (max-width: 800px) {
-    
 }
